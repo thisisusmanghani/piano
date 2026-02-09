@@ -1,0 +1,1860 @@
+@charset "utf-8";
+/* CSS Document 
+   TemplateMo 606 String Master - Green Enterprise Revamp
+*/
+
+:root {
+	/* Green Enterprise Palette */
+	--primary: #10b981;
+	/* Emerald 500 */
+	--primary-dark: #059669;
+	/* Emerald 600 */
+	--primary-glow: rgba(16, 185, 129, 0.4);
+
+	--bg-body: #09090b;
+	/* Zinc 950 */
+	--bg-card: #18181b;
+	/* Zinc 900 */
+	--bg-surface: #27272a;
+	/* Zinc 800 */
+
+	--border: #27272a;
+	/* Zinc 800 */
+	--border-highlight: #3f3f46;
+	/* Zinc 700 */
+
+	--text-main: #f4f4f5;
+	/* Zinc 100 */
+	--text-muted: #a1a1aa;
+	/* Zinc 400 */
+
+	--font-main: 'Inter', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: var(--font-main);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--bg-body);
+	color: var(--text-main);
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Typography & Utilities */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--text-main);
+	font-weight: 600;
+	letter-spacing: -0.02em;
+}
+
+p {
+	color: var(--text-muted);
+}
+
+a {
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+.highlight {
+	color: var(--primary);
+}
+
+/* Sections */
+section {
+	padding: 6rem 1rem;
+	position: relative;
+	border-bottom: 1px solid var(--border);
+}
+
+.section-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.section-header {
+	margin-bottom: 4rem;
+	text-align: left;
+	/* Enterprise standard */
+}
+
+.section-label {
+	font-size: 0.75rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: var(--primary);
+	margin-bottom: 0.75rem;
+}
+
+.section-title {
+	font-size: 2.25rem;
+	margin-bottom: 1rem;
+}
+
+.section-description {
+	font-size: 1.125rem;
+	max-width: 600px;
+	line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background: rgba(9, 9, 11, 0.95);
+	/* Solid-ish */
+	border-bottom: 1px solid var(--border);
+	backdrop-filter: blur(8px);
+}
+
+.nav-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: var(--text-main);
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	letter-spacing: -0.02em;
+}
+
+.logo-icon {
+	width: 32px;
+	height: 32px;
+	background: var(--primary);
+	color: var(--bg-body);
+	border-radius: 6px;
+	/* Squarer */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.2rem;
+}
+
+.nav-links {
+	display: flex;
+	gap: 2rem;
+	list-style: none;
+}
+
+.nav-links a {
+	color: var(--text-muted);
+	font-size: 0.9rem;
+	font-weight: 500;
+}
+
+.nav-links a:hover {
+	color: var(--primary);
+}
+
+.nav-cta {
+	background: var(--bg-surface);
+	color: var(--text-main);
+	border: 1px solid var(--border-highlight);
+	padding: 0.5rem 1rem;
+	border-radius: 6px;
+	font-size: 0.85rem;
+	font-weight: 500;
+}
+
+.nav-cta:hover {
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+	padding: 8rem 1rem 5rem;
+	display: flex;
+	align-items: center;
+	background: linear-gradient(to bottom, var(--bg-body), var(--bg-card));
+	border-bottom: 1px solid var(--border);
+}
+
+.hero-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	align-items: center;
+}
+
+.hero-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 6px 12px;
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 100px;
+	font-size: 0.8rem;
+	font-weight: 500;
+	color: var(--text-muted);
+	backdrop-filter: blur(8px);
+	margin-bottom: 1.5rem;
+	transition: all 0.3s ease;
+	cursor: default;
+}
+
+.hero-badge:hover {
+	background: rgba(255, 255, 255, 0.06);
+	border-color: rgba(255, 255, 255, 0.2);
+	color: var(--text-main);
+	transform: translateY(-1px);
+}
+
+.hero-badge span {
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: var(--primary);
+	box-shadow: 0 0 8px var(--primary);
+}
+
+.hero h1 {
+	font-size: 3.5rem;
+	font-weight: 700;
+	line-height: 1.1;
+	margin-bottom: 1.5rem;
+}
+
+.hero-description {
+	font-size: 1.125rem;
+	margin-bottom: 2rem;
+	max-width: 500px;
+}
+
+.hero-buttons {
+	display: flex;
+	gap: 1rem;
+	margin-bottom: 3rem;
+}
+
+.btn-primary {
+	background: var(--primary);
+	color: white;
+	/* Always white for contrast on green */
+	padding: 0.75rem 1.5rem;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 0.95rem;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.btn-primary:hover {
+	background: var(--primary-dark);
+}
+
+.btn-secondary {
+	background: transparent;
+	color: var(--text-main);
+	border: 1px solid var(--border-highlight);
+	padding: 0.75rem 1.5rem;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 0.95rem;
+}
+
+.btn-secondary:hover {
+	background: var(--bg-surface);
+	border-color: var(--text-muted);
+}
+
+.hero-stats {
+	display: flex;
+	gap: 2rem;
+	padding-top: 2rem;
+	border-top: 1px solid var(--border);
+}
+
+.stat-value {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--text-main);
+}
+
+.stat-label {
+	font-size: 0.75rem;
+	color: var(--text-muted);
+	text-transform: uppercase;
+}
+
+/* Guitar Player (Preserving specific class names) */
+.guitar-wrapper {
+	position: relative;
+	z-index: 10;
+}
+
+.guitar-card {
+	background: var(--bg-card);
+	border: 1px solid var(--border);
+	/* Simple border */
+	border-radius: 12px;
+	padding: 1.5rem;
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05),
+		0 20px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.guitar-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.5rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid var(--border);
+}
+
+.guitar-title {
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: var(--text-muted);
+	text-transform: uppercase;
+}
+
+.guitar-controls {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.chord-btn {
+	background: var(--bg-surface);
+	border: 1px solid var(--border-highlight);
+	color: var(--text-muted);
+	width: 36px;
+	height: 36px;
+	border-radius: 6px;
+	font-size: 0.85rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.15s;
+}
+
+.chord-btn:hover {
+	border-color: var(--primary);
+	color: var(--text-main);
+}
+
+.chord-btn.active {
+	background: var(--primary);
+	border-color: var(--primary);
+	color: white;
+}
+
+/* Fretboard Interface */
+.guitar-neck {
+	border-radius: 4px;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 1.5rem;
+	border: 1px solid var(--border);
+}
+
+.fretboard {
+	/* Flat Enterprise Look: No wood texture, just dark tech */
+	background: #111113;
+	position: relative;
+	/* preserve grid system */
+}
+
+/* The Grid Container */
+.fretboard-grid {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(6, 36px);
+	/* Slightly taller for clickability */
+	position: relative;
+}
+
+/* Nut */
+.nut {
+	height: 8px;
+	background: linear-gradient(to bottom, #3f3f46, #27272a);
+	border-bottom: 2px solid #18181b;
+}
+
+/* String Labels */
+.string-labels {
+	position: absolute;
+	left: -24px;
+	top: 0;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.string-label {
+	font-size: 0.65rem;
+	color: var(--text-muted);
+	width: 20px;
+	text-align: center;
+	line-height: 36px;
+	font-weight: 600;
+}
+
+/* Frets */
+.fret {
+	position: relative;
+	border-right: 1px solid #27272a;
+	/* Darker fret wires */
+	cursor: pointer;
+	transition: background 0.1s;
+}
+
+.fret:hover {
+	background: rgba(16, 185, 129, 0.05);
+}
+
+/* Strings (Horizontal Lines) */
+.fret::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	background: #71717a;
+	/* Zinc 500 default */
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+	/* 3D effect */
+	pointer-events: none;
+}
+
+/* String Thickness & Colors (Technical Look) */
+/* Bronze/Gold for lower strings, Steel/Silver for higher */
+.fret[data-string="0"]::after {
+	height: 1px;
+	background: #a1a1aa;
+}
+
+/* High E - Steel */
+.fret[data-string="1"]::after {
+	height: 1px;
+	background: #a1a1aa;
+}
+
+/* B - Steel */
+.fret[data-string="2"]::after {
+	height: 2px;
+	background: #d4d4d8;
+}
+
+/* G - Nickel */
+.fret[data-string="3"]::after {
+	height: 2px;
+	background: #d4d4d8;
+}
+
+/* D - Nickel */
+.fret[data-string="4"]::after {
+	height: 3px;
+	background: #71717a;
+}
+
+/* A - Wound */
+.fret[data-string="5"]::after {
+	height: 4px;
+	background: #71717a;
+}
+
+/* Low E - Wound */
+
+/* Inlay Markers */
+.fret-marker {
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background: #27272a;
+	border: 1px solid #3f3f46;
+	border-radius: 50%;
+	pointer-events: none;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin-top: 18px;
+	z-index: 0;
+}
+
+/* Note Marker (The Dot) */
+.note-marker {
+	width: 28px;
+	height: 28px;
+	background: var(--primary);
+	color: white;
+	/* Contrast text */
+	border-radius: 50%;
+	display: none;
+	/* Hidden by default */
+	align-items: center;
+	justify-content: center;
+	font-size: 0.75rem;
+	font-weight: 700;
+	z-index: 5;
+	box-shadow: 0 0 15px var(--primary-glow), inset 0 0 5px rgba(255, 255, 255, 0.3);
+	border: 2px solid white;
+}
+
+.note-marker.show {
+	display: flex;
+	animation: popIn 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+	from {
+		transform: scale(0);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+/* Guitar FooterControls */
+.guitar-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.guitar-footer-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.8rem;
+	color: var(--text-muted);
+}
+
+.footer-controls {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.clear-btn {
+	background: transparent;
+	border: 1px solid var(--border);
+	color: var(--text-muted);
+	padding: 0.35rem 0.85rem;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 0.75rem;
+	font-weight: 500;
+	transition: all 0.2s;
+}
+
+.clear-btn:hover {
+	border-color: var(--text-main);
+	color: var(--text-main);
+	background: var(--bg-surface);
+}
+
+/* Sound Toggle */
+.sound-toggle {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	cursor: pointer;
+}
+
+.toggle-switch {
+	width: 36px;
+	height: 20px;
+	background: var(--bg-surface);
+	border: 1px solid var(--border-highlight);
+	border-radius: 100px;
+	position: relative;
+	transition: background 0.2s;
+}
+
+.toggle-switch::after {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 14px;
+	height: 14px;
+	background: var(--text-muted);
+	border-radius: 50%;
+	transition: transform 0.2s, background 0.2s;
+}
+
+.toggle-switch.active {
+	background: var(--primary-dark);
+	border-color: var(--primary);
+}
+
+.toggle-switch.active::after {
+	transform: translateX(16px);
+	background: white;
+}
+
+/* Song Player Bar */
+.song-player {
+	background: var(--bg-body);
+	padding: 0.75rem 1rem;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	border: 1px solid var(--border);
+}
+
+.play-btn {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: none;
+	background: var(--primary);
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.2s;
+	box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.play-btn:hover {
+	transform: scale(1.05);
+	background: #10b981;
+	/* ensure it stays green */
+	box-shadow: 0 0 25px var(--primary-glow);
+}
+
+.play-btn svg {
+	fill: currentColor;
+	width: 14px;
+	height: 14px;
+}
+
+.play-btn.playing {
+	animation: pulseGreen 2s infinite;
+}
+
+@keyframes pulseGreen {
+	0% {
+		box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+	}
+
+	70% {
+		box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+	}
+}
+
+.song-info {
+	flex: 1;
+}
+
+.song-title {
+	font-size: 0.75rem;
+	font-weight: 600;
+	margin-bottom: 0.35rem;
+	color: var(--text-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.song-progress {
+	height: 4px;
+	background: var(--bg-surface);
+	width: 100%;
+	border-radius: 2px;
+	overflow: hidden;
+}
+
+.song-progress-bar {
+	height: 100%;
+	background: var(--primary);
+	width: 0%;
+	border-radius: 2px;
+	box-shadow: 0 0 8px var(--primary);
+}
+
+.song-select {
+	background: var(--bg-surface);
+	border: 1px solid var(--border-highlight);
+	color: var(--text-main);
+	padding: 0.5rem 2.5rem 0.5rem 1rem;
+	/* Space for arrow */
+	border-radius: 6px;
+	font-size: 0.85rem;
+	outline: none;
+	appearance: none;
+	/* Remove default arrow */
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a1a1aa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 0.75rem center;
+	background-size: 16px;
+	cursor: pointer;
+	transition: all 0.2s;
+	min-width: 140px;
+}
+
+.song-select:hover,
+.song-select:focus {
+	border-color: var(--primary);
+	background-color: var(--bg-card);
+}
+
+/* Features (Revamped Grid) */
+.features {
+	background: var(--bg-body);
+}
+
+.features-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1px;
+	background: var(--border);
+	/* Grid line effect */
+	border: 1px solid var(--border);
+}
+
+.feature-card {
+	background: var(--bg-body);
+	/* Cards sit on top of grid lines */
+	padding: 2.5rem;
+	transition: background 0.2s;
+}
+
+.feature-card:hover {
+	background: var(--bg-card);
+}
+
+.feature-icon {
+	width: 48px;
+	height: 48px;
+	background: rgba(16, 185, 129, 0.1);
+	color: var(--primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+	font-size: 1.1rem;
+	margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+	font-size: 0.95rem;
+	line-height: 1.6;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	align-items: start;
+}
+
+.pricing-card {
+	background: var(--bg-body);
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	padding: 2rem;
+}
+
+.pricing-card.featured {
+	background: var(--bg-card);
+	border: 1px solid var(--primary);
+	position: relative;
+	z-index: 1;
+}
+
+.pricing-name {
+	font-size: 1.25rem;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
+
+.pricing-price {
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: var(--text-main);
+	margin: 1.5rem 0;
+}
+
+.pricing-features li {
+	padding: 0.5rem 0;
+	border-bottom: 1px solid var(--border);
+	font-size: 0.9rem;
+	color: var(--text-muted);
+}
+
+.pricing-features li:last-child {
+	border-bottom: none;
+}
+
+.pricing-btn {
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 0.75rem;
+	margin-top: 2rem;
+	border-radius: 6px;
+	font-weight: 600;
+	font-size: 0.9rem;
+	transition: all 0.2s;
+}
+
+.pricing-card .pricing-btn {
+	background: var(--bg-surface);
+	color: var(--text-main);
+	border: 1px solid var(--border-highlight);
+}
+
+.pricing-card .pricing-btn:hover {
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+.pricing-card.featured .pricing-btn {
+	background: var(--primary);
+	color: white;
+	border: none;
+}
+
+.pricing-card.featured .pricing-btn:hover {
+	background: var(--primary-dark);
+}
+
+/* Billing Toggle */
+.billing-toggle {
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+	margin-bottom: 3rem;
+	background: var(--bg-surface);
+	padding: 0.25rem;
+	border-radius: 6px;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.billing-option {
+	padding: 0.5rem 1rem;
+	background: transparent;
+	border: none;
+	color: var(--text-muted);
+	font-size: 0.9rem;
+	font-weight: 500;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.billing-option.active {
+	background: var(--bg-body);
+	color: var(--text-main);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Instructors - Minimal */
+.instructors-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+}
+
+.instructor-card {
+	background: var(--bg-card);
+	border: 1px solid var(--border);
+	padding: 1.5rem;
+	text-align: center;
+	border-radius: 8px;
+}
+
+.instructor-image {
+	width: 80px;
+	height: 80px;
+	margin: 0 auto 1rem;
+	border-radius: 6px;
+	/* Squarer */
+	overflow: hidden;
+	filter: grayscale(100%);
+	transition: filter 0.2s;
+}
+
+.instructor-card:hover .instructor-image {
+	filter: grayscale(0%);
+}
+
+.instructor-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.instructor-name {
+	font-weight: 600;
+	font-size: 1rem;
+}
+
+.instructor-role {
+	color: var(--primary);
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: 0.5rem;
+}
+
+/* Testimonials */
+.testimonials-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+}
+
+.testimonial-card {
+	border: 1px solid var(--border);
+	padding: 2rem;
+	background: var(--bg-card);
+	border-radius: 8px;
+}
+
+.testimonial-stars {
+	color: var(--primary);
+	margin-bottom: 1rem;
+	font-size: 0.8rem;
+	letter-spacing: 2px;
+}
+
+.testimonial-text {
+	font-style: italic;
+	color: var(--text-main);
+}
+
+.testimonial-author {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	margin-top: 1.5rem;
+}
+
+.testimonial-avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.testimonial-avatar img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Footer */
+footer {
+	padding: 4rem 1rem 2rem;
+	background: var(--bg-body);
+	border-top: 1px solid var(--border);
+}
+
+.footer-grid {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr 1fr;
+	gap: 4rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.footer-brand p {
+	font-size: 0.9rem;
+	margin-top: 1rem;
+	max-width: 300px;
+}
+
+.footer-title {
+	color: var(--text-main);
+	font-size: 0.85rem;
+	font-weight: 600;
+	margin-bottom: 1.5rem;
+}
+
+.footer-links li {
+	margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+	color: var(--text-muted);
+	font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+	color: var(--primary);
+}
+
+.footer-bottom {
+	max-width: 1200px;
+	margin: 4rem auto 0;
+	padding-top: 2rem;
+	border-top: 1px solid var(--border);
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.85rem;
+	color: var(--text-muted);
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+	.hero-container {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+
+	.hero-content {
+		order: 2;
+	}
+
+	.guitar-wrapper {
+		order: 1;
+		width: 100%;
+		max-width: 480px;
+		margin: 0 auto;
+	}
+
+	.hero h1 {
+		font-size: 2.5rem;
+	}
+
+	.hero-buttons {
+		justify-content: center;
+	}
+
+	.hero-stats {
+		justify-content: center;
+	}
+
+	.hero-description {
+		margin: 0 auto 2rem;
+	}
+
+	.features-grid,
+	.pricing-grid,
+	.testimonials-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.instructors-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.footer-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 640px) {
+
+	.nav-links,
+	.nav-cta {
+		display: none;
+	}
+
+	.mobile-menu-btn {
+		display: block;
+	}
+
+	.hero {
+		padding-top: 6rem;
+	}
+
+	.guitar-controls {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.instructors-grid,
+	.footer-grid {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+
+	.footer-title {
+		margin-top: 2rem;
+	}
+}
+
+/* Mobile Menu Button (kept simple) */
+.mobile-menu-btn {
+	display: block;
+}
+
+
+/* --- HIGH FIDELITY VIRTUAL PIANO --- */
+#piano-tool {
+	background: #09090b;
+	border-bottom: 1px solid #27272a;
+	padding: 4rem 0;
+}
+
+.piano-wrapper {
+	background: #18181b;
+	/* Case Body */
+	border-radius: 12px;
+	padding: 30px 30px 10px 30px;
+	/* Top padding for controls */
+	box-shadow:
+		0 20px 50px rgba(0, 0, 0, 0.5),
+		inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	border: 1px solid #27272a;
+	position: relative;
+}
+
+/* The red felt strip found on real pianos */
+.piano-keys::before {
+	content: '';
+	position: absolute;
+	top: -12px;
+	left: 0;
+	right: 0;
+	height: 12px;
+	background: #9f1239;
+	/* Rose/Red felt */
+	box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+	z-index: 5;
+}
+
+.piano-keys {
+	display: flex;
+	height: 320px;
+	position: relative;
+	background: #000;
+	/* Gap filler */
+	gap: 1px;
+	border-radius: 0 0 4px 4px;
+	overflow: visible;
+	margin-top: 1rem;
+}
+
+.key {
+	position: relative;
+	cursor: pointer;
+	user-select: none;
+	transition: transform 0.05s ease, background 0.1s;
+}
+
+.key span {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 0.65rem;
+	font-weight: 700;
+	opacity: 0.7;
+	pointer-events: none;
+}
+
+/* WHITE KEYS - Physical Ivory Look */
+.key.white {
+	flex: 1;
+	background: linear-gradient(to bottom, #fff 0%, #f4f4f5 90%, #e4e4e7 100%);
+	border-radius: 0 0 6px 6px;
+	height: 100%;
+	z-index: 1;
+	box-shadow:
+		inset 0 1px 0px #fff,
+		inset 0 -5px 10px rgba(0, 0, 0, 0.1),
+		0 2px 5px rgba(0, 0, 0, 0.2);
+	color: #71717a;
+}
+
+.key.white:active,
+.key.white.active {
+	background: linear-gradient(to bottom, #d4d4d8 0%, #10b981 100%);
+	/* Green Glow at tip */
+	transform: rotateX(-5deg) translateY(2px);
+	/* Physical dip */
+	box-shadow:
+		inset 0 2px 5px rgba(0, 0, 0, 0.3),
+		0 0 15px var(--primary-glow);
+	border-bottom: 2px solid #059669;
+	color: #064e3b;
+}
+
+/* BLACK KEYS - Physical Ebony Look */
+.key.black {
+	width: 6%;
+	/* Specific width */
+	height: 65%;
+	background: linear-gradient(to bottom, #27272a 0%, #000 90%, #18181b 100%);
+	margin-left: -3%;
+	margin-right: -3%;
+	z-index: 10;
+	border-radius: 0 0 4px 4px;
+	box-shadow:
+		-1px 2px 5px rgba(0, 0, 0, 0.5),
+		/* Side shadow */
+		inset 0 1px 2px rgba(255, 255, 255, 0.2),
+		/* Top highlight */
+		2px 5px 5px rgba(0, 0, 0, 0.4);
+	color: rgba(255, 255, 255, 0.4);
+}
+
+.key.black span {
+	bottom: 10px;
+	color: white;
+}
+
+.key.black:active,
+.key.black.active {
+	background: linear-gradient(to bottom, #10b981 0%, #059669 100%);
+	transform: rotateX(-5deg) translateY(2px);
+	box-shadow:
+		inset 0 2px 5px rgba(0, 0, 0, 0.5),
+		0 0 15px var(--primary-glow);
+}
+
+/* Controls - Physical Knobs/Buttons style */
+.piano-controls {
+	display: flex;
+	gap: 3rem;
+	align-items: center;
+	background: #27272a;
+	padding: 1rem 2rem;
+	border-radius: 8px;
+	border: 1px solid #3f3f46;
+	box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.control-group {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.control-group label {
+	color: #a1a1aa;
+	font-size: 0.75rem;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Range Slider - Physical Fader Look */
+input[type=range] {
+	-webkit-appearance: none;
+	width: 120px;
+	background: transparent;
+}
+
+input[type=range]::-webkit-slider-track {
+	width: 100%;
+	height: 6px;
+	background: #09090b;
+	border-radius: 3px;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+	border: 1px solid #3f3f46;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 24px;
+	width: 14px;
+	border-radius: 2px;
+	background: #52525b;
+	margin-top: -10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+	border: 1px solid #71717a;
+	cursor: pointer;
+}
+
+input[type=range]:focus::-webkit-slider-thumb {
+	background: var(--primary);
+	box-shadow: 0 0 10px var(--primary-glow);
+}
+
+/* --- HIGH FIDELITY DRUM MACHINE --- */
+#drum-tool {
+	background: #18181b;
+}
+
+.drum-wrapper {
+	background: #27272a;
+	/* Device Casing */
+	border: 2px solid #3f3f46;
+	border-radius: 8px;
+	padding: 2rem;
+	box-shadow:
+		0 20px 50px rgba(0, 0, 0, 0.6),
+		inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.drum-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2rem;
+	background: #18181b;
+	padding: 1rem;
+	border-radius: 6px;
+	border: 1px solid #000;
+	box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.lcd-display {
+	font-family: 'Courier New', monospace;
+	background: #102e22;
+	/* dim screen */
+	color: #10b981;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	border: 1px solid #000;
+	box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.8);
+	display: flex;
+	gap: 1rem;
+	align-items: baseline;
+	position: relative;
+	overflow: hidden;
+}
+
+.lcd-display::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(rgba(255, 255, 255, 0.05) 50%, rgba(0, 0, 0, 0.05) 50%);
+	background-size: 100% 4px;
+	pointer-events: none;
+}
+
+.lcd-display .value {
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.transport-btn {
+	width: 48px;
+	height: 48px;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	box-shadow: 0 4px 0 #000, 0 5px 10px rgba(0, 0, 0, 0.5);
+	transition: all 0.1s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.transport-btn:active {
+	transform: translateY(4px);
+	box-shadow: 0 0 0 #000;
+}
+
+.transport-btn.play {
+	background: #10b981;
+	/* Green */
+}
+
+.transport-btn.stop {
+	background: #ef4444;
+	/* Red */
+}
+
+/* Sequencer Grid */
+.sequencer-grid {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.track-row {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.track-label {
+	width: 80px;
+	text-align: right;
+	font-size: 0.75rem;
+	font-weight: 700;
+	color: #a1a1aa;
+	letter-spacing: 0.1em;
+}
+
+.steps {
+	flex: 1;
+	display: grid;
+	grid-template-columns: repeat(16, 1fr);
+	gap: 6px;
+}
+
+/* Rubber Pads */
+.step {
+	aspect-ratio: 1;
+	background: #3f3f46;
+	border-radius: 4px;
+	cursor: pointer;
+	position: relative;
+	box-shadow: inset 0 -2px 5px rgba(0, 0, 0, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.1);
+	transition: background 0.1s;
+}
+
+/* Every 4th step marker */
+.step:nth-child(4n+1) {
+	background: #52525b;
+	/* Slightly lighter for beat emphasis */
+}
+
+/* Active State (LED On) */
+.step.active {
+	background: #10b981;
+	box-shadow:
+		0 0 10px var(--primary-glow),
+		inset 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Playing State (Cursor) */
+.step.playing {
+	border: 1px solid white;
+}
+
+/* --- Volume Slider Customization --- */
+input[type=range] {
+	-webkit-appearance: none;
+	width: 100%;
+	background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+	background: var(--primary);
+	cursor: pointer;
+	margin-top: -6px;
+	box-shadow: 0 0 10px var(--primary-glow);
+	border: 2px solid white;
+	/* Added white border for extra visibility */
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 4px;
+	cursor: pointer;
+	background: #52525b;
+	/* Lighter Zinc for visibility */
+	border-radius: 2px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+	background: #71717a;
+}
+
+input[type=range]::-moz-range-thumb {
+	height: 16px;
+	width: 16px;
+	border: 2px solid white;
+	border-radius: 50%;
+	background: var(--primary);
+	cursor: pointer;
+	box-shadow: 0 0 10px var(--primary-glow);
+}
+
+input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 4px;
+	cursor: pointer;
+	background: #52525b;
+	border-radius: 2px;
+}
+
+/* --- Master Mixer Slider Styling (Vertical Faders) --- */
+/* Container needs to accommodate rotated sliders */
+.fader-group {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+	position: relative;
+	height: 150px;
+	/* Space for the rotated slider */
+	justify-content: flex-end;
+	/* Align labels at bottom */
+}
+
+/* Reset default slider appearance and rotate to vertical */
+.mixer-panel input[type=range] {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 120px;
+	/* Length of the slider */
+	height: 8px;
+	/* Thickness of the slider */
+	background: transparent;
+	cursor: pointer;
+	/* Rotate 90 degrees counter-clockwise to make it vertical */
+	transform: rotate(-90deg);
+	transform-origin: center;
+	margin-bottom: 60px;
+	/* Spacing correction due to rotation */
+}
+
+/* WebKit (Chrome, Safari, Edge) Track */
+.mixer-panel input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 8px;
+	background: linear-gradient(to right,
+			rgba(16, 185, 129, 0.2) 0%,
+			rgba(16, 185, 129, 0.5) 50%,
+			rgba(239, 68, 68, 0.5) 100%);
+	border: 1px solid #3f3f46;
+	border-radius: 4px;
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* WebKit Thumb */
+.mixer-panel input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 14px;
+	height: 24px;
+	background: linear-gradient(to bottom, #f4f4f5, #d4d4d8);
+	border: 1px solid #52525b;
+	border-radius: 2px;
+	cursor: grab;
+	box-shadow:
+		0 2px 4px rgba(0, 0, 0, 0.4),
+		inset 0 1px 0 rgba(255, 255, 255, 0.3);
+	margin-top: -8px;
+	/* Center thumb on track: (8px track - 24px thumb) / 2 = -8px */
+}
+
+.mixer-panel input[type=range]::-webkit-slider-thumb:hover {
+	background: linear-gradient(to bottom, #fff, #e4e4e7);
+}
+
+.mixer-panel input[type=range]::-webkit-slider-thumb:active {
+	cursor: grabbing;
+}
+
+/* Firefox Track */
+.mixer-panel input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 8px;
+	background: linear-gradient(to right,
+			rgba(16, 185, 129, 0.2) 0%,
+			rgba(16, 185, 129, 0.5) 50%,
+			rgba(239, 68, 68, 0.5) 100%);
+	border: 1px solid #3f3f46;
+	border-radius: 4px;
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Firefox Thumb */
+.mixer-panel input[type=range]::-moz-range-thumb {
+	width: 14px;
+	height: 24px;
+	background: linear-gradient(to bottom, #f4f4f5, #d4d4d8);
+	border: 1px solid #52525b;
+	border-radius: 2px;
+	cursor: grab;
+	box-shadow:
+		0 2px 4px rgba(0, 0, 0, 0.4),
+		inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.mixer-panel input[type=range]::-moz-range-thumb:hover {
+	background: linear-gradient(to bottom, #fff, #e4e4e7);
+}
+
+.mixer-panel input[type=range]::-moz-range-thumb:active {
+	cursor: grabbing;
+}
+
+/* Accent color glow effects for each fader */
+#drumVol::-webkit-slider-thumb {
+	box-shadow:
+		0 2px 4px rgba(0, 0, 0, 0.4),
+		inset 0 1px 0 rgba(255, 255, 255, 0.3),
+		0 0 8px rgba(244, 63, 94, 0.5);
+}
+
+#pianoVol::-webkit-slider-thumb {
+	box-shadow:
+		0 2px 4px rgba(0, 0, 0, 0.4),
+		inset 0 1px 0 rgba(255, 255, 255, 0.3),
+		0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+#bassVol::-webkit-slider-thumb {
+	box-shadow:
+		0 2px 4px rgba(0, 0, 0, 0.4),
+		inset 0 1px 0 rgba(255, 255, 255, 0.3),
+		0 0 8px rgba(139, 92, 246, 0.5);
+}
+
+#leadVol::-webkit-slider-thumb {
+	box-shadow:
+		0 2px 4px rgba(0, 0, 0, 0.4),
+		inset 0 1px 0 rgba(255, 255, 255, 0.3),
+		0 0 8px rgba(234, 179, 8, 0.5);
+}
+
+#atmVol::-webkit-slider-thumb {
+	box-shadow:
+		0 2px 4px rgba(0, 0, 0, 0.4),
+		inset 0 1px 0 rgba(255, 255, 255, 0.3),
+		0 0 8px rgba(16, 185, 129, 0.5);
+}
+
+/* Label styling improvements */
+.fader-group label {
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-size: 0.7rem;
+	color: #a1a1aa;
+}
+
+/* --- CTA Section (Green Enterprise Style) --- */
+.cta {
+	padding: 8rem 1rem;
+	background: radial-gradient(circle at center, #18181b 0%, #09090b 100%);
+	border-top: 1px solid #27272a;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.cta::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60%;
+	height: 1px;
+	background: linear-gradient(90deg, transparent, #10b981, transparent);
+	opacity: 0.5;
+}
+
+.cta::after {
+	content: '';
+	position: absolute;
+	bottom: -100px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 600px;
+	height: 300px;
+	background: #10b981;
+	filter: blur(120px);
+	opacity: 0.08;
+	pointer-events: none;
+}
+
+.cta-content {
+	max-width: 700px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 2;
+}
+
+.cta h2 {
+	font-size: 3.5rem;
+	font-weight: 800;
+	margin-bottom: 1.5rem;
+	background: linear-gradient(to bottom, #fff 40%, #71717a 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	letter-spacing: -0.04em;
+	line-height: 1.1;
+}
+
+.cta p {
+	font-size: 1.25rem;
+	color: #a1a1aa;
+	margin-bottom: 3rem;
+	line-height: 1.6;
+}
+
+.cta .btn-primary {
+	font-size: 1.1rem;
+	padding: 1rem 3rem;
+	border-radius: 100px;
+	background: #10b981;
+	color: #000;
+	font-weight: 700;
+	box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta .btn-primary:hover {
+	transform: translateY(-2px) scale(1.02);
+	box-shadow: 0 0 40px rgba(16, 185, 129, 0.6);
+	background: #34d399;
+}
+
+@media (max-width: 768px) {
+	.cta {
+		padding: 6rem 1rem;
+	}
+
+	.cta h2 {
+		font-size: 2.5rem;
+	}
+}
+
+/* --- Footer (Green Enterprise Style) --- */
+footer {
+	background: #09090b;
+	border-top: 1px solid #27272a;
+	padding: 6rem 0 2rem;
+	color: #a1a1aa;
+	font-size: 0.95rem;
+}
+
+.footer-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.footer-grid {
+	display: grid;
+	grid-template-columns: 1.5fr 1fr 1fr 1fr;
+	gap: 4rem;
+	margin-bottom: 6rem;
+}
+
+.footer-brand .logo {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #fff;
+	text-decoration: none;
+	margin-bottom: 1.5rem;
+	letter-spacing: -0.02em;
+}
+
+.footer-brand .logo-icon {
+	width: 32px;
+	height: 32px;
+	background: #10b981;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #000;
+	font-size: 1.2rem;
+	box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+}
+
+.footer-brand p {
+	line-height: 1.6;
+	max-width: 300px;
+}
+
+.footer-title {
+	color: #fff;
+	font-size: 0.85rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: 1.5rem;
+}
+
+.footer-links {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.footer-links a {
+	color: #a1a1aa;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+.footer-links a:hover {
+	color: #10b981;
+}
+
+.footer-bottom {
+	border-top: 1px solid #27272a;
+	padding-top: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.85rem;
+}
+
+.footer-bottom a {
+	color: #a1a1aa;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+.footer-bottom a:hover {
+	color: #fff;
+}
+
+@media (max-width: 1024px) {
+	.footer-grid {
+		gap: 2rem;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 640px) {
+	.footer-grid {
+		grid-template-columns: 1fr;
+		gap: 3rem;
+	}
+
+	.footer-bottom {
+		flex-direction: column;
+		gap: 1rem;
+		text-align: center;
+	}
+}

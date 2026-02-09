@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        background-color: #09090b;
+        color: #f4f4f5;
+    }
+
+    body {
+        @apply font-sans antialiased;
+    }
+}
+
+/* Custom Utilities from original CSS */
+.text-gradient {
+    background: linear-gradient(to right, #fff, #a1a1aa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
